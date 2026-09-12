@@ -73,6 +73,7 @@ export function useImageKitUpload(fileType: FileType) {
 
         file,
         fileName: file.name,
+        useUniqueFileName: true,
 
         onProgress: (event) => {
           if (event.total) {
