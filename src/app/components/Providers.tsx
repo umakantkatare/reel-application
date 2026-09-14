@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { ImageKitProvider } from "@imagekit/next";
 import { SessionProvider } from "next-auth/react";
 
@@ -9,7 +9,7 @@ interface Props {
 const Providers = ({ children }: Props) => {
   const urlEndpoint = process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT;
   return (
-    <SessionProvider>
+    <SessionProvider refetchInterval={5 * 60} refetchOnWindowFocus={true}>
       <ImageKitProvider urlEndpoint={urlEndpoint}>{children}</ImageKitProvider>
     </SessionProvider>
   );
