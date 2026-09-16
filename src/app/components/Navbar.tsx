@@ -36,9 +36,9 @@ const Navbar = () => {
             <div className="h-9 w-24 animate-pulse rounded-md bg-white/10" />
           ) : session ? (
             <>
-              <Link href="/create">
+              <Link href="/upload">
                 <button className="border-white/10 bg-transparent text-white hover:bg-white/10">
-                  Create Reel
+                  Upload Reel
                 </button>
               </Link>
 
